@@ -36,6 +36,10 @@ public class Player {
 
     }
 
+    public Hand getHand() {
+        return hand;
+    }
+
     public void bet(int amount) {
         bet = amount + bet;
         money = money - amount;
@@ -43,6 +47,14 @@ public class Player {
 
     public void stand() {
 
+    }
+
+    public int getHandTotal(){
+        int sum = 0;
+        for(Card card: hand.getPlayerHand()){
+            sum += card.getValue();
+        }
+        return sum;
     }
 
     public void addWinnings(int winnings){
