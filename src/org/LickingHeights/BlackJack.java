@@ -8,7 +8,7 @@ public class BlackJack {
     private ArrayList<Player>players;
 
     public BlackJack() {
-        super();
+
         deck = new Deck();
         players = new ArrayList<>();
         init(4);
@@ -137,6 +137,9 @@ public class BlackJack {
             case "S":
             case "E":
                 return true;
+            case "displayDeck":
+                deck.printDeck();
+                break;
 
         }
         return false;
