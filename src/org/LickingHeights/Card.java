@@ -20,6 +20,10 @@ public class Card {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString() {
         return name + " of "+ suit + " with a value of "+ value;
