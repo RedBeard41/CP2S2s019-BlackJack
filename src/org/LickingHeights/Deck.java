@@ -36,11 +36,15 @@ public class Deck {
 
             if (i % 13 < 10) {
                 deck[i].setValue((i % 13) + 1);
+
+
             }
 
-            if (i % 13 >= 11) {
+            if (i % 13 >= 10) {
                 deck[i].setValue(10);
             }
+
+
             cardsUsed = 0;
         }
 
@@ -49,6 +53,8 @@ public class Deck {
 
     public void reshuffle(){
         buildDeck();
+
+
         shuffle();
     }
 
